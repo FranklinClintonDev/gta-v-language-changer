@@ -45,4 +45,4 @@ This branch contains modified code with the following changes:
 ## Credits
 
 - Original Language Changer by [Rockstar Games](https://www.rockstargames.com/).
-- Cracked Version Made by [greensci](https://github.com/greensci).
+- Cracked Version made by [greensci](https://github.com/greensci).
