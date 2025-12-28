@@ -26,6 +26,8 @@ Contains the **unedited source code** from the leak.
 ### Cracked Branch
 [cracked branch](https://github.com/FranklinClintonDev/gta-v-language-changer/tree/cracked)
 
+- This version was made by [greensci](https://github.com/greensci)
+
 This branch contains modified code with the following changes:
 
 - `vSteamLoad` is forced to `1` (Steam version only).  
@@ -39,3 +41,8 @@ This branch contains modified code with the following changes:
 
 - [Download Language Changer (Cracked)](https://github.com/FranklinClintonDev/gta-v-language-changer/releases/tag/Cracked)
 - [Download Language Changer Source Code (Cracked)](https://github.com/FranklinClintonDev/gta-v-language-changer/archive/refs/heads/cracked.zip)
+
+## Credits
+
+- Original Language Changer by [Rockstar Games](https://www.rockstargames.com/).
+- Cracked Version Made by [greensci](https://github.com/greensci).
