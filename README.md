@@ -46,3 +46,6 @@ This branch contains modified code with the following changes:
 
 - Original Language Changer by [Rockstar Games](https://www.rockstargames.com/).
 - Cracked Version made by [greensci](https://github.com/greensci).
+
+---------------------------------------------------------------------
+### If you need any help feel free to ask in our discord server https://discord.com/invite/Yd3YamEAYK
