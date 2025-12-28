@@ -1,3 +1,4 @@
+; GreenSoupDev was here.
 Unicode true													; Using Unicode stuff
 SetCompressor /SOLID lzma 										;Set compressor
 
@@ -17,14 +18,15 @@ SetCompressor /SOLID lzma 										;Set compressor
 !define regMAINKEYSTEAM		"Software\Rockstar Games\Grand Theft Auto V Steam\"
 !define regLAUNCHERKEY		"InstallFolder"
 !define regLANGUAGEKEY		"Language"
-!define nonSteamLauncher	"PlayGTAV.exe"
+!define regVERSIONKEY		"Version"
+!define nonSteamLauncher	"GTAVLauncher.exe"
 !define steamLauncher		"GTAVLauncher.exe"
-!define vSteamLoad			1
+!define vSteamLoad			0  ; 0 = non-steam version / 1 = steam version
 
 ; Version Info
 VIProductVersion "1.0.0.3"
 VIAddVersionKey /LANG=1033 "ProductName" "GTA V Language Select"
-VIAddVersionKey /LANG=1033 "Comments" "GTA V Language Select"
+VIAddVersionKey /LANG=1033 "Comments" "GTA V Language Select (CRACKED)"
 VIAddVersionKey /LANG=1033 "CompanyName" "Rockstar Games."
 VIAddVersionKey /LANG=1033 "LegalTrademarks" "(C) Rockstar Games. All rights reserved"
 VIAddVersionKey /LANG=1033 "LegalCopyright" "(C) Rockstar Games. All rights reserved"
@@ -601,13 +603,10 @@ Function .onInit
 		ReadRegStr $R9 HKLM "${regMAINKEY}" "${regLAUNCHERKEY}"
 		${If} $R9 == ""
 			Call SetLanguageStrings 	; Load strings
-			MessageBox MB_OK "$tFindError"
-			; delete reg
-			DeleteRegKey HKLM "${regMAINKEYLS}" 
-			; delete shortcut and exe
-			Delete "$SMPROGRAMS\Rockstar Games\$LSShortcutName.lnk"
-			Delete /REBOOTOK "$EXEPATH"
-			Abort
+			WriteRegStr HKLM "${regMAINKEY}" "${regLANGUAGEKEY}" "$vSelectedLanguageCode"
+			WriteRegStr HKLM "${regMAINKEY}" "${regLAUNCHERKEY}" "C:\Program Files\Rockstar Games\Grand Theft Auto V"
+			WriteRegStr HKLM "${regMAINKEY}" "${regVERSIONKEY}" "1.0.3274.0"
+		    ; tFindError thing here
 		${Else}
 			StrCpy $vGameInstallFolder "$R9"
 		${EndIf}
